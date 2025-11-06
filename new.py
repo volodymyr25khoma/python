@@ -1,14 +1,28 @@
-print("hello world")
-user_email = "example@gmail.com"
-name = "Volodya"
-print(name)
+num1 = "1"
+print(type(num1))
+num_1 = int(num1)
+print(type(num_1))
+num_1 = float(num1)
+print(num_1)
+print(type(num_1))
 
-name = "Volodymyr"
-print(name)
 
-lst = {1, 2, 3, 4, 5}
-dct = {"name": "Volodya", "age": 3}
-name = "Volodya"
-tpl = ("n", "a", "g")
-
-print(dct["name"] == name and dct["age"] in lst)
+string = "hello world!"
+print(len(string))
+string = string.upper()
+print(string)
+string = string.lower()
+print(string)
+string = string.capitalize()
+print(string)
+string = string.replace("!", ".")
+print(string)
+string = string.split()
+print(string)
+string = " ".join(string)
+print(string)
+string = string.count("l")
+print(string)
+string = 1
+string = str(string)
+print(type(string))
