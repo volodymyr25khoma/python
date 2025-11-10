@@ -1,28 +1,30 @@
-num1 = "1"
-print(type(num1))
-num_1 = int(num1)
-print(type(num_1))
-num_1 = float(num1)
-print(num_1)
-print(type(num_1))
+# умовні оператори
+
+string = "Hello world!"
+
+if "Hello" not in string:
+    print("Hello in string")
+elif "world" in string:
+    print("world in string")
+else:
+    print("Word is not in string")
 
 
-string = "hello world!"
-print(len(string))
-string = string.upper()
-print(string)
-string = string.lower()
-print(string)
-string = string.capitalize()
-print(string)
-string = string.replace("!", ".")
-print(string)
-string = string.split()
-print(string)
-string = " ".join(string)
-print(string)
-string = string.count("l")
-print(string)
-string = 1
-string = str(string)
-print(type(string))
+# умови з числами
+a = 10
+b = 20
+if a >= 10 and b > 20 or b < 30:
+    print(a + b)
+else:
+    print("error 404")
+
+
+# умови зі списками
+test_list = ("Hello", "Anya", 1, 2, 3)
+
+if "Hello" in test_list and 1 in test_list:
+    print("Hello 1")
+elif "Anya" in test_list and 5 not in test_list:
+    print("Anya not 5")
+else:
+    print("You are wrong like your conditions")
