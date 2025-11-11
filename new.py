@@ -1,86 +1,59 @@
-# умовні оператори
+# цикли
+test_list = [1, 2, 3, 4, 5, 6]
 
-string = "Hello world!"
-
-if "Hello" not in string:
-    print("Hello in string")
-elif "world" in string:
-    print("world in string")
-else:
-    print("Word is not in string")
+for num in test_list:
+    print(f"You have got a {num}")
 
 
-# умови з числами
-a = 10
-b = 20
-if a >= 10 and b > 20 or b < 30:
-    print(a + b)
-else:
-    print("error 404")
+a = 0
+
+while a < 10:
+    a += 1
+    print(a)
 
 
-# умови зі списками
-test_list = ("Hello", "Anya", 1, 2, 3)
-
-if "Hello" in test_list and 1 in test_list:
-    print("Hello 1")
-elif "Anya" in test_list and 5 not in test_list:
-    print("Anya not 5")
-else:
-    print("You are wrong like your conditions")
-
-# додатково
-a = 10
-b = 20
-c = "chat is active"
-d = "count of users"
-print(len(c), len(d))
-
-if len(c) >= b:
-    print(c)
-elif len(d) <= a:
-    print(d)
-else:
-    print("error")
+b = 7
+while len(test_list) < 13:
+    test_list.append(b)
+    b += 1
+    print(test_list)
 
 
-# вкладені умови
-user_1 = {
-    "name": "Volodya",
-    "age": 22,
-    "balance": 50000,
-    "currency": "USD",
-    "status": True,
-}
+# ітерація
+test_list_2 = ["test", "python", "Anya"]
 
-user_2 = {
-    "name": "Anya",
-    "age": 18,
-    "balance": 10000,
-    "currency": "EUR",
-    "status": True,
-}
-
-user_3 = {
-    "name": "Roman",
-    "age": 28,
-    "balance": 100000,
-    "currency": "PLN",
-    "status": False,
-}
-
-currency_list = {"USD", "UAH", "EUR", "PLN", "GBP"}
-
-if user_2["name"] and user_2["age"] >= 18 and user_2["status"]:
-    if user_2["balance"] >= 10000 and user_2["currency"] in currency_list:
-        print(f"Hello and welcome to ByBit, {user_2['name']}")
-    elif user_2["balance"] >= 1000 and user_2["currency"] in currency_list:
-        print("You need more money for registration!")
+for s in test_list_2:
+    print(s, "is updating...")
+    if s == "test":
+        print(s)
+    elif s == "python":
+        print(s)
     else:
-        print("Critical not enough")
-elif not user_2["name"]:
-    print("Please, write your name in your account description")
-elif user_2["age"] < 18:
-    print("You have to be 18 or more years old for registration")
-else:
-    print("Something went wrong, try again")
+        print(s)
+
+
+# тест циклів
+user_1 = {"username": "tester", "role": "admin", "connection": True}
+
+user_2 = {"username": "junior", "role": "guest", "connection": False}
+
+user_3 = {"username": "middle", "role": "user", "connection": True}
+
+list_of_users = [user_1, user_2, user_3]
+
+for user in list_of_users:
+    print(f"Work with {user['username']} account |")
+    if not user["connection"]:
+        count_of_tries = 10
+        while count_of_tries != 0:
+            print("Trying to connect...")
+            count_of_tries -= 1
+            if count_of_tries == 5:
+                print("Time to fix your internet")
+                continue
+            print("Count of tries left: ", count_of_tries)
+    elif user["role"] == "admin":
+        print(f"Welcome back, {user['username']}")
+    else:
+        print("Welcome on the board")
+print("All users were checked!")
