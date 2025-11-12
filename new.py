@@ -1,59 +1,44 @@
-# цикли
-test_list = [1, 2, 3, 4, 5, 6]
+# списки
+a = [1, 2, 3, 4, 5]
+b = ["apple", "pear", "banana"]
 
-for num in test_list:
-    print(f"You have got a {num}")
+print(a[0], a[1], a[-1])
+print(b[1], b[-1])
+
+print(a[1:4], a[::2])
+print(b[::2])
+
+print(a[::-1])
+print(b[::-1])
+
+# методи списку
+a.append(6)
+b.append("cherry")
+print(a, b)
+
+a.insert(2, 9.5)
+b.insert(2, "rock")
+print(a, b)
+
+a.remove(9.5)
+b.remove("rock")
+print(a, b)
+
+last_element1 = a.pop()
+last_element2 = b.pop()
+print(last_element1, last_element2)
+
+print(a.index(3), b.index("banana"))
+
+a.extend([7, 7, 7])
+b.extend(["apple", "apple", "pear"])
+print(a.count(5), b.count("pear"), b.count("apple"))
 
 
-a = 0
-
-while a < 10:
-    a += 1
-    print(a)
-
-
-b = 7
-while len(test_list) < 13:
-    test_list.append(b)
-    b += 1
-    print(test_list)
-
-
-# ітерація
-test_list_2 = ["test", "python", "Anya"]
-
-for s in test_list_2:
-    print(s, "is updating...")
-    if s == "test":
-        print(s)
-    elif s == "python":
-        print(s)
-    else:
-        print(s)
-
-
-# тест циклів
-user_1 = {"username": "tester", "role": "admin", "connection": True}
-
-user_2 = {"username": "junior", "role": "guest", "connection": False}
-
-user_3 = {"username": "middle", "role": "user", "connection": True}
-
-list_of_users = [user_1, user_2, user_3]
-
-for user in list_of_users:
-    print(f"Work with {user['username']} account |")
-    if not user["connection"]:
-        count_of_tries = 10
-        while count_of_tries != 0:
-            print("Trying to connect...")
-            count_of_tries -= 1
-            if count_of_tries == 5:
-                print("Time to fix your internet")
-                continue
-            print("Count of tries left: ", count_of_tries)
-    elif user["role"] == "admin":
-        print(f"Welcome back, {user['username']}")
-    else:
-        print("Welcome on the board")
-print("All users were checked!")
+print(a, b)
+a.sort()
+b.sort()
+print(a, b)
+a.sort(reverse=True)
+b.sort(reverse=True)
+print(a, b)
