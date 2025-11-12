@@ -42,3 +42,37 @@ print(a, b)
 a.sort(reverse=True)
 b.sort(reverse=True)
 print(a, b)
+
+
+# словники
+test_dict = {"user": "Volodya", "age": 22, "country": "Poland"}
+print(test_dict["user"], test_dict["age"], test_dict["country"])
+print(test_dict.get("animal", "key not found"))
+
+test_dict["country"] = "Ukraine"
+print(test_dict["country"])
+
+test_dict["animal"] = "Jack"
+print(test_dict["animal"])
+
+animal = test_dict.pop("animal")
+print(animal)
+print(test_dict)
+
+
+# методи словника
+copy_dict = test_dict.copy()
+test_dict.clear()
+print(test_dict)
+print(copy_dict)
+
+for key, value in copy_dict.items():
+    print(f"Key: {key}, Value: {value}")
+
+
+wrong_key = copy_dict.pop("currency", "key not found")
+print(wrong_key)
+
+dict_update = {"position": "junior", "salary": 1000}
+copy_dict.update(dict_update)
+print(copy_dict)
